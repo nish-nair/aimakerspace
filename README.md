@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# aimakerspace
-=======
 ---
 title: BeyondChatGPT Demo
 emoji: 📉
@@ -15,7 +12,6 @@ app_port: 7860
      width="200px"
      height="auto"/>
 </p>
-
 
 ## <h1 align="center" id="heading">:wave: Welcome to Beyond ChatGPT!!</h1>
 
@@ -42,45 +38,47 @@ That's it! Head to the next step and start building your application!
 
 </details>
 
-
 <details>
   <summary>🏗️ Building Your First LLM App</summary>
 
 1. Clone [this](https://github.com/AI-Maker-Space/Beyond-ChatGPT/tree/main) repo.
 
-     ``` bash
-     git clone https://github.com/AI-Maker-Space/Beyond-ChatGPT.git
-     ```
+   ```bash
+   git clone https://github.com/AI-Maker-Space/Beyond-ChatGPT.git
+   ```
 
 2. Navigate inside this repo
-     ``` bash
-     cd Beyond-ChatGPT
-     ```
+
+   ```bash
+   cd Beyond-ChatGPT
+   ```
 
 3. Create a virtual environment and install dependencies.
-     ``` bash
-     # Create a virtual environment
-     uv venv
 
-     # Activate the virtual environment
-     # On macOS/Linux:
-     source .venv/bin/activate
-     # On Windows:
-     # .venv\Scripts\activate
+   ```bash
+   # Create a virtual environment
+   uv venv
 
-     # Install dependencies from pyproject.toml
-     uv sync
-     ``` 
+   # Activate the virtual environment
+   # On macOS/Linux:
+   source .venv/bin/activate
+   # On Windows:
+   # .venv\Scripts\activate
+
+   # Install dependencies from pyproject.toml
+   uv sync
+   ```
 
 4. Open your `.env` file. Replace the `###` in your `.env` file with your OpenAI Key and save the file.
-     ``` bash
-     OPENAI_API_KEY=sk-###
-     ```
+
+   ```bash
+   OPENAI_API_KEY=sk-###
+   ```
 
 5. Let's try deploying it locally. Make sure you're in the activated virtual environment. Run the app using Chainlit. This may take a minute to run.
-     ``` bash
-     uv run chainlit run app.py -w
-     ```
+   ```bash
+   uv run chainlit run app.py -w
+   ```
 
 <p align = "center" draggable="false">
 <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/54bcccf9-12e2-4cef-ab53-585c1e2b0fb5"> 
@@ -90,27 +88,26 @@ Great work! Let's see if we can interact with our chatbot.
 
 <p align = "center" draggable="false">
 <img src="https://github.com/AI-Maker-Space/LLMOps-Dev-101/assets/37101144/854e4435-1dee-438a-9146-7174b39f7c61"> 
-</p> 
+</p>
 
 Awesome! Time to throw it into a docker container and prepare it for shipping!
+
 </details>
-
-
 
 <details>
   <summary>🐳 Containerizing our App</summary>
 
 1. Let's build the Docker image. We'll tag our image as `llm-app` using the `-t` parameter. The `.` at the end means we want all of the files in our current directory to be added to our image. Note that our Dockerfile is set up to use uv for dependency management and will install all the packages defined in our pyproject.toml file.
-     
-     ``` bash
-     docker build -t llm-app .
-     ```
+
+   ```bash
+   docker build -t llm-app .
+   ```
 
 2. Run and test the Docker image locally using the `run` command. The `-p`parameter connects our **host port #** to the left of the `:` to our **container port #** on the right.
-    
-     ``` bash
-     docker run -p 7860:7860 llm-app
-     ```
+
+   ```bash
+   docker run -p 7860:7860 llm-app
+   ```
 
 3. Visit http://localhost:7860 in your browser to see if the app runs correctly.
 
@@ -119,8 +116,8 @@ Awesome! Time to throw it into a docker container and prepare it for shipping!
 </p>
 
 Great! Time to ship!
-</details>
 
+</details>
 
 <details>
   <summary>🚀 Deploying Your First LLM App</summary>
@@ -132,7 +129,7 @@ Great! Time to ship!
 </p>
 
 2. Setup your space as shown below:
-   
+
 - Owner: Your username
 - Space Name: `llm-app`
 - License: `Openrail`
@@ -200,5 +197,4 @@ Who else is diving into the world of AI? Let's connect! 🌐💡
 
 <p></p>
 
-### That's it for now!  And so it begins.... :)
->>>>>>> BCBranch
+### That's it for now! And so it begins.... :)
